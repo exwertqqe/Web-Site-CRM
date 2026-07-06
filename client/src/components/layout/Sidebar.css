@@ -1,0 +1,251 @@
+.sidebar {
+    width: 280px;
+    background-color: white;
+    /* border-right: 1px solid #e5e5e5; */
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    padding-bottom: 2rem;
+}
+
+/* Header */
+.sidebar-header {
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    /* Extra bold */
+    color: #0f172a;
+    /* Darker slate */
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Section Titles (Categories, Filters) */
+.sidebar-section-title {
+    padding: 1.25rem 1.5rem 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-section-title.clickable {
+    cursor: pointer;
+    transition: background-color 0.2s;
+    user-select: none;
+}
+
+.sidebar-section-title.clickable:hover {
+    background-color: #f8fafc;
+    color: #2563eb;
+}
+
+/* Separator */
+.sidebar-separator {
+    height: 1px;
+    background-color: #f1f5f9;
+    margin: 0.5rem 1.5rem;
+}
+
+/* Category Items */
+.nav-item {
+    margin-bottom: 2px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 1.5rem;
+    color: #475569;
+    text-decoration: none;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border-left: 3px solid transparent;
+}
+
+.nav-link:hover {
+    background-color: #f8fafc;
+    color: #2563eb;
+    /* Blue hover */
+    text-decoration: none;
+}
+
+.nav-item.active .nav-link {
+    font-weight: 600;
+    background-color: #eff6ff;
+    color: #2563eb;
+    border-left-color: #2563eb;
+}
+
+.nav-icon {
+    width: 20px;
+    height: 20px;
+    color: #94a3b8;
+}
+
+.nav-item.active .nav-icon {
+    color: #2563eb;
+}
+
+/* Filters Section */
+.filter-group {
+    padding: 0 1.5rem;
+    margin-bottom: 1rem;
+    /* width: 100%; removed to prevent overflow with padding */
+}
+
+.filter-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+.filter-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+/* Filter List Container - Enforce Vertical Stack */
+.filter-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    max-height: 240px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 0.5rem;
+    /* padding-right: 4px; removed to prevent calc issues, scrollbar is fine */
+}
+
+/* Search input */
+.filter-search {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+    background-color: white !important;
+    color: #1e293b !important;
+    box-sizing: border-box;
+    /* Important */
+}
+
+.filter-search:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+/* Checkbox Row */
+.filter-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #475569;
+    width: 100%;
+    padding: 2px 0;
+    box-sizing: border-box;
+}
+
+.filter-checkbox-label:hover {
+    color: #1e293b;
+    background-color: transparent;
+}
+
+.filter-checkbox-label span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* flex: 1; removed so text shrinks to content, count sits next to it */
+    max-width: 180px;
+    /* Limit text width manually if needed or let flex handle it */
+}
+
+/* Custom Checkbox */
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.filter-count {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin-left: 0.5rem;
+    /* Standard gap */
+    flex-shrink: 0;
+}
+
+/* Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #e2e8f0;
+    border-radius: 4px;
+}
+
+/* Categories Animation */
+.categories-wrapper {
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    max-height: 1000px; /* High enough to contain all categories */
+    opacity: 1;
+}
+
+.categories-wrapper.collapsed {
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+}

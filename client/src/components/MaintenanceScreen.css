@@ -1,0 +1,80 @@
+.maintenance-screen {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    font-family: inherit;
+}
+
+.maintenance-content {
+    background: white;
+    padding: 4rem 3rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    max-width: 600px;
+    width: 100%;
+}
+
+.maintenance-icon {
+    display: flex;
+    justify-content: center;
+    color: #3b82f6;
+    /* Brand Blue */
+    margin-bottom: 2rem;
+}
+
+.spin-slow {
+    animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.maintenance-content h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+}
+
+.maintenance-content p {
+    font-size: 1.1rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.maintenance-footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.admin-login-link {
+    background: none;
+    border: none;
+    color: #3b82f6;
+    /* Visible blue link */
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+    padding: 0.5rem;
+}
+
+.admin-login-link:hover {
+    color: #1d4ed8;
+}

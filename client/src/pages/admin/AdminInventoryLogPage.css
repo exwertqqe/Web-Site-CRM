@@ -1,0 +1,226 @@
+/* AdminInventoryLogPage.css - Full Custom Design */
+
+.inventory-log-page {
+    padding: 2.5rem;
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #f8fafc;
+    min-height: 100vh;
+}
+
+.log-header {
+    margin-bottom: 2.5rem;
+}
+
+.log-title-row {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.log-icon-box {
+    padding: 0.75rem;
+    background: #2563eb;
+    border-radius: 1.25rem;
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+}
+
+.log-header h2 {
+    font-size: 2.25rem;
+    font-weight: 900;
+    margin: 0;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+}
+
+.log-header p {
+    color: #64748b;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* List Styling */
+.log-card {
+    background: white;
+    border-radius: 2rem;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.log-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.log-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.75rem 2.5rem;
+    border-bottom: 1px solid #f1f5f9;
+    transition: all 0.2s;
+    border-left: 6px solid transparent;
+}
+
+.log-item:last-child {
+    border-bottom: none;
+}
+
+.log-item:hover {
+    background: #f8fafc;
+    transform: translateX(4px);
+}
+
+.log-item.ADD { border-left-color: #10b981; }
+.log-item.REMOVE { border-left-color: #ef4444; }
+.log-item.SALE { border-left-color: #3b82f6; }
+.log-item.RETURN { border-left-color: #f59e0b; }
+.log-item.MOVE { border-left-color: #8b5cf6; }
+.log-item.MANUAL_CHANGE { border-left-color: #f59e0b; }
+
+.log-main-info {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.action-icon-circle {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: #f1f5f9;
+    border-radius: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    border: 1px solid #e2e8f0;
+}
+
+.log-details-core {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.log-top-line {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.log-badge {
+    font-size: 0.7rem;
+    font-weight: 900;
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.badge-ADD { background: #dcfce7; color: #166534; }
+.badge-REMOVE { background: #fee2e2; color: #991b1b; }
+.badge-SALE { background: #dbeafe; color: #1e40af; }
+.badge-RETURN { background: #fef3c7; color: #92400e; }
+.badge-MOVE { background: #f3e8ff; color: #6b21a8; }
+.badge-MANUAL_CHANGE { background: #fff7ed; color: #c2410c; }
+
+.product-name-bold {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #1e293b;
+}
+
+.color-variant-tag {
+    color: #94a3b8;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.log-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.qty-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+
+.qty-pill.positive { color: #059669; }
+.qty-pill.negative { color: #dc2626; }
+
+.qty-type-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+
+.comment-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f1f5f9;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+    color: #475569;
+    font-weight: 500;
+}
+
+.comment-label {
+    font-weight: 700;
+    color: #94a3b8;
+}
+
+.user-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.log-time-column {
+    text-align: right;
+    min-width: 150px;
+}
+
+.time-val {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: #1e293b;
+}
+
+.date-val {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.25rem;
+}
+
+/* Empty State */
+.empty-logs {
+    padding: 5rem;
+    text-align: center;
+    color: #94a3b8;
+}
+
+.empty-logs p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+}

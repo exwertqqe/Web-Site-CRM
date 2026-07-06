@@ -1,0 +1,147 @@
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f8fafc;
+}
+
+.admin-sidebar {
+    width: 260px;
+    background-color: white;
+    border-right: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.admin-logo {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.admin-logo .logo-icon {
+    height: 36px;
+    width: auto;
+    object-fit: contain;
+}
+
+.admin-logo .logo-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.text-blue-600 {
+    color: #2563eb;
+}
+
+.admin-nav {
+    flex: 1;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.admin-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    color: #4b5563;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.admin-nav-item:hover {
+    background-color: #f9fafb;
+    color: #111827;
+}
+
+.admin-nav-item.active {
+    background-color: #eff6ff;
+    color: #2563eb;
+}
+
+.admin-footer {
+    padding: 1rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: none;
+    background: none;
+    color: #ef4444;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.logout-btn:hover {
+    background-color: #fef2f2;
+}
+
+.admin-main {
+    flex: 1;
+    margin-left: 260px;
+    /* Width of sidebar */
+}
+
+.admin-header {
+    height: 64px;
+    background-color: white;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.admin-header h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #334155;
+    font-weight: 500;
+}
+
+.admin-avatar {
+    width: 32px;
+    height: 32px;
+    background-color: #bfdbfe;
+    color: #1e40af;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.admin-content {
+    padding: 2rem;
+}

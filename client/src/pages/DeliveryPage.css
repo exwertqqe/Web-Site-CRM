@@ -1,0 +1,226 @@
+/* Shared base styles for Info Pages */
+.info-page {
+    font-family: 'Inter', sans-serif;
+    color: #1f2937;
+    background-color: #f8fafc;
+    padding-bottom: 5rem;
+}
+
+.info-hero {
+    padding: 6rem 2rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.info-hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Gradients for different pages */
+.bg-gradient-delivery {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+}
+
+.bg-gradient-warranty {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.bg-gradient-returns {
+    background: linear-gradient(135deg, #ef4444, #f97316);
+}
+
+/* Main Container */
+.info-container {
+    max-width: 1000px;
+    margin: -3rem auto 0;
+    position: relative;
+    z-index: 20;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    padding: 3rem;
+}
+
+.info-divider {
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 3rem 0;
+}
+
+/* Sections */
+.info-section {
+    margin-bottom: 2rem;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.section-header h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.text-blue {
+    color: #3b82f6;
+}
+
+.text-purple {
+    color: #8b5cf6;
+}
+
+.text-green {
+    color: #10b981;
+}
+
+.text-orange {
+    color: #f97316;
+}
+
+/* Grid and Cards */
+.info-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.info-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    border-color: #cbd5e1;
+}
+
+.card-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.bg-red-light {
+    background: #fee2e2;
+}
+
+.bg-blue-light {
+    background: #dbeafe;
+}
+
+.bg-green-light {
+    background: #dcfce7;
+}
+
+.bg-purple-light {
+    background: #f3e8ff;
+}
+
+.bg-orange-light {
+    background: #ffedd5;
+}
+
+.info-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.info-card p {
+    color: #64748b;
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.card-price {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #0f172a;
+    padding-top: 1rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* Lists inside cards */
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    flex-grow: 1;
+}
+
+.info-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    color: #475569;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.info-list li::before {
+    content: "•";
+    color: #cbd5e1;
+    font-weight: bold;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+@media (max-width: 768px) {
+    .info-hero {
+        padding: 4rem 1.5rem 5rem;
+    }
+
+    .info-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .info-container {
+        margin: -2rem 1.5rem 0;
+        padding: 2rem 1.5rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+}

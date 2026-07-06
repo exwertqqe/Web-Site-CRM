@@ -1,0 +1,58 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  /* Force light color scheme — prevents inputs/selects from going dark */
+  color-scheme: light;
+  color: #111827;
+  background-color: #f8fafc;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  width: 100%;
+}
+
+#root {
+  width: 100%;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* Reset default Vite button styles — let each component style its own buttons */
+button {
+  border-radius: 4px;
+  border: none;
+  padding: 0;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: transparent;
+}
+
+button:focus,
+button:focus-visible {
+  outline: none;
+}
+
+/* Ensure all inputs and selects use white background by default */
+input,
+textarea,
+select {
+  background-color: #ffffff;
+  color: #111827;
+  font-family: inherit;
+  box-sizing: border-box;
+}

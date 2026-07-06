@@ -1,0 +1,33 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.app-layout {
+    display: flex;
+    flex: 1;
+    background-color: #f8f9fa;
+    /* Light background for contrast */
+    color: #333;
+}
+
+.main-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    /* Prevent overflow issues */
+}
+
+.page-content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+/* Dark mode support if parent has .dark class */
+:global(.dark) .app-layout {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}

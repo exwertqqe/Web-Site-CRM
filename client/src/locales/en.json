@@ -1,0 +1,1051 @@
+{
+  "admin": {
+    "nav": {
+      "dashboard": "Dashboard",
+      "products": "Products",
+      "categories": "Categories",
+      "orders": "Orders",
+      "warehouse": "Warehouse",
+      "inventory_log": "Inventory Log",
+      "tasks": "Task Board",
+      "customers": "Customers",
+      "reviews": "Reviews",
+      "chats": "Chats",
+      "support": "Support Tickets",
+      "settings": "Settings"
+    },
+    "header": {
+      "control_panel": "Control Panel",
+      "main_admin": "Main Admin",
+      "logout": "Log Out"
+    },
+    "common": {
+      "delete_modal": {
+        "warning": "This action is irreversible. Please be careful.",
+        "cancel": "Cancel",
+        "confirm": "Delete",
+        "deleting": "Deleting..."
+      },
+      "units": "pcs."
+    },
+    "dashboard": {
+      "title": "Analytics & Statistics",
+      "loading": "Loading analytics...",
+      "error_fetch": "Error loading statistics",
+      "unknown_error": "Unknown error",
+      "btn_edit": "Customize",
+      "btn_done": "Done",
+      "btn_add_widget": "Add widget",
+      "hint_hidden": "All widgets are hidden. Add the ones you need via the settings menu.",
+      "widgets": {
+        "total_sales": {
+          "title": "Total Sales",
+          "label": "All time"
+        },
+        "active_orders": {
+          "title": "Active Orders",
+          "label": "In progress"
+        },
+        "total_products": {
+          "title": "Product Base",
+          "label": "Unique products"
+        },
+        "new_customers": {
+          "title": "New Customers",
+          "label": "Registered"
+        },
+        "avg_order_value": {
+          "title": "Average Check",
+          "label": "Per order"
+        },
+        "warranty_claims_count": {
+          "title": "Warranty Requests",
+          "label": "Total requests"
+        },
+        "cancellation_rate": {
+          "title": "Cancellation Rate",
+          "label": "Of all orders"
+        },
+        "low_stock": {
+          "title": "Low Stock Products",
+          "label": "Critical balance",
+          "btn": "View"
+        },
+        "orders_this_month": {
+          "title": "Monthly Orders",
+          "label": "Current month"
+        },
+        "total_orders": {
+          "title": "Total Orders",
+          "label": "Completed"
+        },
+        "cancellation_count": {
+          "title": "Cancelled Orders",
+          "label": "Count"
+        },
+        "warranty_rate": {
+          "title": "Warranty Rate",
+          "label": "Of sales"
+        },
+        "chart_orders_by_status": {
+          "title": "By status"
+        },
+        "chart_orders_last_7_days": {
+          "title": "7 Days"
+        },
+        "chart_sales_by_month": {
+          "title": "Monthly Dynamics"
+        },
+        "chart_sales_by_category": {
+          "title": "By categories"
+        }
+      },
+      "card": {
+        "sales": "Total Sales",
+        "orders": "Active Orders",
+        "products": "Product Base",
+        "clients": "New Customers",
+        "average_check": "Average Check",
+        "warranty_numeric": "Warranty Requests",
+        "cancellation_rate": "Cancellation Rate",
+        "low_stock": "Low Stock Products",
+        "this_month": "Monthly Orders",
+        "total_orders": "Total Orders",
+        "cancellation_numeric": "Cancelled Orders",
+        "warranty_rate": "Warranty Rate",
+        "from_total": "Of total count",
+        "chart_status": "Distribution by Status",
+        "chart_7_days": "Orders Last 7 Days",
+        "chart_monthly": "Monthly Dynamics",
+        "chart_category": "Sales by Category",
+        "no_data": "No data to display",
+        "currency": "UAH",
+        "sales_label": "Sales"
+      },
+      "top_products": {
+        "title": "Top 10 Selling Products",
+        "empty": "No data on product sales",
+        "sales": "Sold: {{count}} pcs.",
+        "sales_unit": "sales"
+      },
+      "recent_orders": {
+        "title": "Recent Orders",
+        "empty": "No recent orders",
+        "table": {
+          "id": "ID",
+          "date": "Date & Time",
+          "customer": "Customer",
+          "total": "Amount",
+          "status": "Status"
+        }
+      },
+      "modals": {
+        "add_widget": {
+          "title": "Available Widgets",
+          "close": "Close",
+          "all_added": "All widgets already added ✓"
+        },
+        "low_stock": {
+          "title": "Low Stock Products",
+          "close": "Close",
+          "product": "Product",
+          "color": "Color",
+          "stock": "Stock"
+        }
+      }
+    },
+    "products": {
+      "title": "Products",
+      "add_btn": "Add Product",
+      "search_placeholder": "Search by name...",
+      "filter_all_categories": "All Categories",
+      "sort_default": "Sorting",
+      "sort_name_asc": "A to Z",
+      "sort_name_desc": "Z to A",
+      "sort_price_asc": "Price (low to high)",
+      "sort_price_desc": "Price (high to low)",
+      "sort_stock_asc": "Quantity (low to high)",
+      "sort_stock_desc": "Quantity (high to low)",
+      "table": {
+        "name": "Name",
+        "category": "Category",
+        "price": "Price",
+        "stock": "Stock",
+        "actions": "Actions"
+      },
+      "stock": {
+        "out_of_stock": "Out of Stock",
+        "in_stock": "In Stock",
+        "low_stock": "Low Stock"
+      },
+      "actions": {
+        "edit": "Edit",
+        "copy": "Copy",
+        "delete": "Delete",
+        "confirm_delete": "Are you sure you want to delete this product?",
+        "delete_error": "Error deleting product"
+      }
+    },
+    "add_product_modal": {
+      "title_edit": "Edit Product",
+      "title_copy": "Copy Product",
+      "title_new": "New Product",
+      "copy_suffix": " (Copy)",
+      "form": {
+        "name": "Product Name",
+        "price": "Price (₴)",
+        "category": "Category",
+        "select_category": "Select category",
+        "description": "Description",
+        "variants_title": "Color Variations",
+        "add_variant": "Add Color",
+        "color_name": "Color Name",
+        "color_name_placeholder": "Red",
+        "color_code": "Code (Hex)",
+        "stock": "Stock",
+        "variant_images": "Photos for this color",
+        "image_url_placeholder": "Image URL",
+        "add_image": "Add photo",
+        "no_variants": "No color variations",
+        "attributes_title": "Specifications",
+        "section_placeholder": "Section name (e.g. Display)",
+        "attribute_name_placeholder": "Name (e.g. Diagonal)",
+        "attribute_value_placeholder": "Value (e.g. 6.1)",
+        "add_attribute": "+ Add parameter",
+        "add_section": "Add specifications section"
+      },
+      "actions": {
+        "cancel": "Cancel",
+        "save": "Save",
+        "create": "Create",
+        "delete_variant": "Delete color",
+        "delete_image": "Delete photo"
+      },
+      "errors": {
+        "save_error": "Error saving product"
+      }
+    },
+    "categories": {
+      "title": "Categories",
+      "add_btn": "Add Category",
+      "search_placeholder": "Search categories...",
+      "table": {
+        "name": "Name",
+        "slug": "Slug",
+        "parent": "Parent Category",
+        "products": "Products",
+        "actions": "Actions"
+      },
+      "badge_oversized": "Oversized",
+      "delete_modal": {
+        "title": "Delete Category",
+        "confirm_message": "Are you sure you want to delete category \"{{name}}\"?",
+        "warning_message": "Warning! Category \"{{name}}\" contains {{count}} products. All of them will be deleted along with the category.",
+        "auth_error": "Authentication error. Please log in again.",
+        "delete_error": "Error during deletion"
+      }
+    },
+    "add_category_modal": {
+      "title_edit": "Edit Category",
+      "title_new": "New Category",
+      "form": {
+        "name": "Category Name",
+        "name_placeholder": "Example: Smartphones",
+        "slug": "Slug (URL address)",
+        "slug_placeholder": "Example: smartphones",
+        "slug_reset": "Reset",
+        "slug_url": "Category URL: /category/{{slug}}",
+        "parent": "Parent Category (optional)",
+        "parent_none": "No parent (Root)",
+        "is_oversized": "Oversized Category",
+        "is_oversized_desc": "Products in this category take 200 slots instead of 1 (e.g. furniture, appliances)"
+      },
+      "actions": {
+        "cancel": "Cancel",
+        "save": "Save",
+        "create": "Create"
+      },
+      "errors": {
+        "auth_error": "Authentication error. Please log in again.",
+        "save_error": "Error saving category"
+      }
+    },
+    "orders": {
+      "title": "Orders",
+      "search_placeholder": "Search by number, name, phone or S/N...",
+      "loading": "Loading orders...",
+      "no_orders": "No orders found",
+      "table": {
+        "id": "Order Number",
+        "date": "Order Date",
+        "customer": "Customer",
+        "total": "Amount",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "status": {
+        "NEW": "New",
+        "CONFIRMED": "Confirmed",
+        "PAID": "Paid",
+        "SHIPPED": "Shipped",
+        "DELIVERED": "Received",
+        "SUCCESSFUL": "Successful",
+        "CANCELED": "Canceled",
+        "WARRANTY_CLAIM": "Warranty Claim"
+      },
+      "details": {
+        "title": "Order #{{id}}",
+        "warranty_btn": "Warranty",
+        "smart_storekeeper_btn": "Smart Storekeeper",
+        "status_section": "Order Status",
+        "customer_info": "Customer Details",
+        "customer_name": "Full Name",
+        "customer_phone": "Phone",
+        "customer_email": "Email",
+        "shipping_info": "Shipping",
+        "city": "City",
+        "address": "Address / Branch",
+        "items": "Items ({{count}})",
+        "summary": "Summary",
+        "total_label": "Total Amount:",
+        "view_details_tooltip": "View Details",
+        "warranty_sn": "S/N: {{sn}}",
+        "warranty_expired": "Warranty Expired",
+        "warranty_active": "Remaining: {{count}} mo."
+      },
+      "warranty_modal": {
+        "title": "Generate Warranty Card",
+        "instruction": "Specify serial number and warranty period for each item:",
+        "current_sn": "Current: {{sn}}",
+        "sn_placeholder": "Serial Number (S/N)",
+        "months_placeholder": "Mo. (e.g. 12)",
+        "cancel": "Cancel",
+        "submit": "Generate PDF",
+        "save_error": "Error saving warranty data"
+      },
+      "pdf": {
+        "title": "WARRANTY CARD",
+        "order_info": "Order No. {{id}} from {{date}}",
+        "customer": "Customer",
+        "phone": "Phone",
+        "sale_date": "Sale Date",
+        "table": {
+          "number": "No.",
+          "name": "Item Description",
+          "quantity": "Quantity",
+          "sn": "Serial Number",
+          "warranty": "Warranty Period"
+        },
+        "terms_title": "Warranty Obligations",
+        "terms_1": "Warranty service is provided during the warranty period specified in this warranty card, provided it is kept throughout the warranty period and the conditions of operation of the product are met, and consists of free repair in authorized service centers of the manufacturer, taking into account warranty limitations specified by the manufacturer in accompanying documents, the manufacturer's warranty card, or on the website of the manufacturer or importer.",
+        "terms_2": "The consumer checks the product's completeness, absence of damage or defects before purchasing it.",
+        "terms_3": "Exchange or return of goods of proper quality is carried out within 14 days not counting the day of purchase. Please note, only new goods that have not been in operation and have no traces of use are subject to exchange or return. The list of goods not subject to exchange (return) is provided by the CMU Resolution No. 172 of 19.03.1994.",
+        "terms_4": "When exchanging or returning a product, the following must be preserved:",
+        "list_1": "payment document;",
+        "list_2": "commercial appearance, consumer properties;",
+        "list_3": "integrity, absence of damage and all parts of the packaging;",
+        "list_4": "seals, labels, protective films;",
+        "list_5": "factory marking.",
+        "terms_5": "If the product fails, or has significant defects in operation, the exchange of such a product or refund occurs only if there is a conclusion from a service center authorized by the manufacturer.",
+        "contact_title": "Service center contact details:",
+        "signatures": {
+          "seller": "Seller Representative:",
+          "customer": "Customer:",
+          "signature_sub": "(signature)"
+        },
+        "confirm_text": "By signing this warranty card, the buyer confirms that they have inspected the product, have no complaints about its appearance and completeness, and are familiar with the terms of warranty service.",
+        "actions": {
+          "status_change_error": "Error changing status"
+        },
+        "months": "mo.",
+        "units": "pcs."
+      },
+      "storekeeper": {
+        "not_found": "No information found about the placement of items from this order in the warehouse.",
+        "error": "Error obtaining warehouse data.",
+        "generalized_name": "Order #{{id}} ({{count}} items)",
+        "modal": {
+          "title_put": "Placing Item in Warehouse",
+          "title_take": "Collecting Item from Warehouse",
+          "put_label": "Put item",
+          "take_label": "Take item",
+          "route_btn": "Collection Route",
+          "print_btn": "Print Receipt",
+          "empty_route": "Select a sector or shelf to display the route",
+          "collect_success": "Item successfully collected!",
+          "put_success": "Item successfully placed!",
+          "color": "Color",
+          "sector": "Sector",
+          "shelf": "Shelf",
+          "quantity": "Quantity",
+          "units": "pcs",
+          "total": "Total",
+          "variant": "variant",
+          "variants": "variants",
+          "locations": "locat.",
+          "done": "Done",
+          "route_title": "Route Map",
+          "loading": "Loading map...",
+          "no_sector": "Select a sector above",
+          "units_label": "pcs.",
+          "print": {
+            "put": "INBOUND",
+            "take": "OUTBOUND",
+            "footer": "SMART WAREHOUSE · THANK YOU"
+          }
+        }
+      }
+    },
+    "warehouse": {
+      "title": "Warehouse Map",
+      "subtitle": "Shelf occupancy visualization",
+      "search_placeholder": "Search for product or shelf...",
+      "loading": "Loading...",
+      "units_label": "pcs.",
+      "stats": {
+        "fill_level": "Occupancy",
+        "slots_unit": "{{used}} / {{total}} slots",
+        "sectors": "Sectors",
+        "sectors_subtext": "Active storage zones",
+        "items": "Products",
+        "items_subtext": "Total inventory quantity"
+      },
+      "sector_tab": "Sector {{name}}",
+      "shelves_count": "{{count}} shelves",
+      "legend": {
+        "empty": "Empty (0%)",
+        "filling": "Filling (1-90%)",
+        "full": "Full (>90%)",
+        "search": "Search result"
+      },
+      "modal": {
+        "title": "Shelf #{{name}}",
+        "subtitle": "Detailed content and stock",
+        "fill_level": "Fill level",
+        "free_space": "Free space",
+        "total_slots": "of {{count}} slots",
+        "items_on_shelf": "Items on shelf",
+        "empty_shelf": "There is nothing on this shelf yet",
+        "oversized": "Oversized",
+        "slots_count": "{{count}} slots",
+        "close_btn": "Close window"
+      }
+    },
+    "reviews": {
+      "title": "Customer Reviews",
+      "subtitle": "Manage reviews and product ratings",
+      "total": "Total: {{count}}",
+      "loading": "Loading reviews...",
+      "error_loading": "Failed to load reviews",
+      "delete_confirm": "Are you sure you want to delete this review?",
+      "delete_error": "Error deleting review",
+      "product_label": "Product",
+      "delete_btn": "Delete review",
+      "no_comment": "No text",
+      "empty_state": {
+        "title": "No reviews yet",
+        "desc": "New reviews from your customers will appear here"
+      }
+    },
+    "kanban": {
+      "title": "Task Management (Kanban)",
+      "loading": "Loading board...",
+      "add_task": "New Task",
+      "search_tasks": "Search tasks...",
+      "all_users": "All assignees",
+      "columns": {
+        "TODO": "To Do",
+        "IN_PROGRESS": "In Progress",
+        "DONE": "Done"
+      },
+      "task": {
+        "points": "points",
+        "assignee": "Assignee: {{name}}",
+        "unassigned": "Unassigned",
+        "no_tasks": "No tasks"
+      }
+    },
+    "support": {
+      "title": "Support Service",
+      "active_tickets": "Active Tickets",
+      "closed_tickets": "Closed",
+      "all_tickets": "All Tickets",
+      "no_tickets": "No open tickets",
+      "guest": "Guest",
+      "close_ticket": "Close ticket",
+      "reply_placeholder": "Reply to customer...",
+      "send": "Send",
+      "table": {
+        "id": "ID",
+        "subject": "Subject",
+        "user": "User",
+        "status": "Status",
+        "priority": "Priority",
+        "date": "Date"
+      }
+    },
+    "chats": {
+      "title": "Messages",
+      "search_placeholder": "Search customer...",
+      "no_chats": "No messages yet",
+      "select_chat": "Select a chat to start talking",
+      "type_message": "Type a message...",
+      "send": "Send",
+      "general_chat": "General Chat",
+      "general_chat_full": "Team General Chat",
+      "dm_section": "Direct Messages",
+      "start_talking": "Be the first to start a conversation!"
+    },
+    "customers": {
+      "title": "Customers",
+      "search_placeholder": "Search (ID, name, email)...",
+      "loading": "Loading customers...",
+      "no_customers": "No customers found",
+      "no_name": "No name",
+      "view_orders_tooltip": "Order details",
+      "table": {
+        "id": "Customer ID",
+        "name_email": "Name & Email",
+        "registration_date": "Registration date",
+        "orders_count": "Orders count",
+        "total_spent": "Total spent",
+        "actions": "Actions"
+      },
+      "modal": {
+        "title": "Customer details: #{{id}}",
+        "total_spent": "Total spent",
+        "orders": "Orders",
+        "registration": "Registration",
+        "order_history": "Order history",
+        "no_orders": "Customer has no orders yet",
+        "order_id": "Order #{{id}}",
+        "qty_price": "{{count}} pcs. × {{price}} ₴"
+      },
+      "order_card": {
+        "items": {
+          "id": "Photo"
+        }
+      }
+    },
+    "inventory_log": {
+      "title": "Inventory Movement History",
+      "subtitle": "Complete warehouse activity and balance log",
+      "loading": "Loading...",
+      "empty": "Movement history is empty",
+      "comment_label": "Comment:",
+      "qty_unit": "{{count}} pcs",
+      "actions": {
+        "ADD": "Added",
+        "REMOVE": "Removed",
+        "SALE": "Sale",
+        "RETURN": "Returned",
+        "MOVE": "Moved",
+        "MANUAL_CHANGE": "Manual edit"
+      },
+      "type": {
+        "positive": "Incoming",
+        "negative": "Outgoing"
+      }
+    },
+    "settings": {
+      "title": "System Settings",
+      "subtitle": "Manage global settings and user access",
+      "loading": "Loading settings...",
+      "general": {
+        "title": "General Settings",
+        "maintenance": {
+          "title": "Maintenance Mode",
+          "desc": "When enabled, the site becomes inaccessible to buyers. They will see a maintenance page.",
+          "on": "Enabled",
+          "off": "Disabled"
+        },
+        "chat": {
+          "title": "Disable Chat",
+          "desc": "When enabled, the support chat widget will be hidden from site visitors.",
+          "on": "Disabled",
+          "off": "Active"
+        },
+        "purchases": {
+          "title": "Disable Purchases",
+          "desc": "When enabled, 'Buy' and 'Checkout' buttons will become inactive for all users.",
+          "on": "Purchases Disabled",
+          "off": "Purchases Active"
+        }
+      },
+      "backup": {
+        "title": "Backup and Export",
+        "sql": {
+          "title": "Full Database Backup (SQL)",
+          "desc": "Download a full dump of the PostgreSQL database (structure + data). Includes products, orders, and users.",
+          "btn": "Download .sql",
+          "creating": "Creating..."
+        },
+        "excel": {
+          "title": "Export Products to Excel",
+          "desc": "Export a list of all active products, their categories, prices, and stock in .xlsx format for analytics.",
+          "btn": "Export .xlsx",
+          "processing": "Processing..."
+        }
+      },
+      "banners": {
+        "title": "Banner Management (Carousel)",
+        "add_btn": "Add slide",
+        "form": {
+          "image_url": "Image URL",
+          "image_placeholder": "https://example.com/slide.jpg or file path",
+          "or": "or",
+          "upload_btn": "Upload from PC",
+          "uploading": "Uploading...",
+          "size_hint": "Ideal image size: 1920 x 720 px",
+          "link_url": "Link (where it leads)",
+          "link_placeholder": "/product/iphone-15",
+          "order": "Order",
+          "cancel": "Cancel",
+          "save": "Save banner"
+        },
+        "delete_confirm": "Are you sure you want to delete this banner?",
+        "not_specified": "Not specified",
+        "order_label": "Order: {{order}}",
+        "empty": "No banners added yet. Create the first slide for the home page."
+      },
+      "users": {
+        "title": "User Roles and Access Management",
+        "no_name": "No name",
+        "table": {
+          "id": "ID",
+          "user": "User",
+          "registration": "Registration date",
+          "role": "Role (Access)",
+          "actions": "Actions"
+        }
+      },
+      "errors": {
+        "delete_banner": "Error deleting banner.",
+        "sql_backup": "Error creating SQL backup. Check Docker status.",
+        "excel_export": "Error exporting to Excel."
+      }
+    },
+    "warehouse_settings": {
+      "title": "Warehouse",
+      "subtitle": "{{sectors}} sectors · {{shelves}} shelves",
+      "loading": "Loading warehouse...",
+      "empty": "No sectors yet. Create the first one below.",
+      "btn_distribute": "Auto-distribute Stock",
+      "sector_label": "Sector {{name}}",
+      "shelves_badge": "{{count}} shlv.",
+      "no_shelves": "No shelves",
+      "delete_sector_title": "Delete sector",
+      "delete_shelf_title": "Delete",
+      "delete_sector_confirm": "Delete sector and all its shelves?",
+      "delete_shelf_confirm": "Delete shelf?",
+      "form": {
+        "title": "New Sector",
+        "sector_name": "Sector Name",
+        "sector_name_placeholder": "e.g. A",
+        "rows_count": "Rows Count",
+        "shelves_per_row": "Shelves per Row",
+        "sector_color": "Sector Color",
+        "color_hint": "Click to pick a color",
+        "preview_hint": "Will create {{count}} shelves ({{rows}} row × {{per_row}}) with logic {{pattern}}-1-1...",
+        "row_plural": {
+          "one": "row",
+          "other": "rows"
+        },
+        "btn_create": "Create Sector",
+        "creating": "Creating..."
+      },
+      "modals": {
+        "confirm": {
+          "title": "Are you sure?",
+          "desc": "This will clear current physical placement on shelves and redistribute all stock items.",
+          "cancel": "Cancel",
+          "submit": "Continue"
+        },
+        "progress": {
+          "title_loading": "Distributing...",
+          "title_done": "Done!",
+          "desc_loading": "Optimizing warehouse space",
+          "desc_done": "Warehouse successfully reorganized",
+          "msg_init": "Initializing server connection...",
+          "msg_error": "An error occurred.",
+          "msg_success": "✓ Completed successfully",
+          "btn_close": "Close"
+        }
+      }
+    }
+  },
+  "guest_chat": {
+    "title": "Guest Support",
+    "subtitle": "We're online and ready to assist you",
+    "start_prompt": "Please introduce yourself to start chatting",
+    "name_placeholder": "Your Name (optional)",
+    "email_placeholder": "Your Email *",
+    "start_btn": "Start Conversation",
+    "greeting": "Hello! How can we help you today?",
+    "session_finished": "Session finished. Thank you for contacting us!",
+    "start_new": "Start new ticket",
+    "input_placeholder": "Type a message...",
+    "closed_placeholder": "Ticket closed"
+  },
+  "store": {
+    "header": {
+      "search_placeholder": "Search products...",
+      "no_photo": "No photo",
+      "all_results": "All results",
+      "no_results": "Sorry, no results found for your query",
+      "admin_panel": "Admin Panel",
+      "profile": "Profile",
+      "cart": "Cart"
+    },
+    "loading": "Loading...",
+    "cart": {
+      "title": "Cart",
+      "empty": "Your cart is empty",
+      "empty_hint": "But it's never too late to fix it :)",
+      "continue_shopping": "Back to shopping",
+      "total": "Total:",
+      "checkout": "Checkout",
+      "checkout_disabled": "Checkout Unavailable"
+    },
+    "sidebar": {
+      "catalog": "Catalog",
+      "all_products": "All Products",
+      "categories": "Categories",
+      "filters": "Filters",
+      "search_placeholder": "Search"
+    },
+    "product_card": {
+      "out_of_stock": "Out of Stock",
+      "sold_out": "Sold Out",
+      "category_placeholder": "Category"
+    },
+    "footer": {
+      "about_us": "About Us",
+      "about_company": "About Company",
+      "for_customers": "For Customers",
+      "delivery_payment": "Delivery & Payment",
+      "warranty": "Warranty",
+      "returns": "Returns",
+      "contacts": "Contacts",
+      "address": "Kyiv, Khreshchatyk str, 1",
+      "rights_reserved": "All rights reserved."
+    },
+    "home": {
+      "hero": {
+        "title": "Modern Electronics for Your Life",
+        "subtitle": "Discover the world of innovation with our collection of premium gadgets.",
+        "cta": "View Catalog"
+      },
+      "titles": {
+        "search_results": "Search results: \"{{query}}\"",
+        "category_results": "Products in category: {{category}}",
+        "popular": "Popular Products"
+      },
+      "empty_category": "No products in this category yet",
+      "pagination": {
+        "prev": "Back",
+        "next": "Forward"
+      }
+    },
+    "product": {
+      "loading": "Loading...",
+      "not_found": "Product not found",
+      "breadcrumbs": {
+        "home": "Home",
+        "catalog": "Catalog"
+      },
+      "tabs": {
+        "about": "About Product",
+        "specs": "Specs",
+        "reviews": "Reviews"
+      },
+      "meta": {
+        "reviews_count": "{{count}} reviews",
+        "no_reviews": "No reviews yet",
+        "code": "Code: {{code}}",
+        "in_stock": "In Stock",
+        "out_of_stock": "Out of Stock"
+      },
+      "specs": {
+        "title": "Model Description",
+        "specs_title": "{{name}} Specifications",
+        "empty": "Specifications are not specified yet."
+      },
+      "reviews": {
+        "title": "Customer Reviews",
+        "add_title": "Leave a Review",
+        "name_label": "Your Name:",
+        "comment_label": "Review",
+        "rating_label": "General Impressions:",
+        "publish": "Publish",
+        "publishing": "Publishing...",
+        "cancel": "Cancel",
+        "all_reviews": "All reviews ({{count}})",
+        "comment_link": "Comment",
+        "comments_count": "{{count}} comments",
+        "empty": "No reviews for this product yet. Be the first!"
+      },
+      "buy": {
+        "color": "Color:",
+        "price_label": "Price",
+        "cashback": "<0/> bonus <1>{{amount}} {{currency}}</1> on purchase",
+        "buy_btn": "Buy",
+        "unavailable": "Purchase unavailable",
+        "out_of_stock": "Out of Stock",
+        "credit": "Buy on credit"
+      },
+      "features": {
+        "shipping": "Shipping today",
+        "delivery": "Free delivery",
+        "exchange": "14 days exchange",
+        "warranty": "Official warranty"
+      },
+      "delivery": {
+        "title": "Delivery",
+        "pickup": "Pickup from stores",
+        "nova_poshta": "Nova Poshta delivery",
+        "courier": "Courier delivery",
+        "free": "Free",
+        "from": "from {{price}} {{currency}}"
+      }
+    },
+    "checkout": {
+      "title": "Checkout",
+      "empty": "Your cart is empty.",
+      "back_to_shopping": "Back to shopping",
+      "error_disabled": "Checkout is temporarily unavailable.",
+      "error_empty": "Your cart is empty!",
+      "error_generic": "An error occurred during checkout. Please try again.",
+      "sections": {
+        "contacts": "1. Contact Information",
+        "delivery": "2. Delivery",
+        "payment": "3. Payment"
+      },
+      "form": {
+        "first_name": "First Name",
+        "last_name": "Last Name",
+        "phone": "Phone",
+        "email": "Email",
+        "city": "City",
+        "delivery_method": "Delivery Method",
+        "delivery_address": "Nova Poshta Branch Number",
+        "delivery_address_courier": "Delivery Address (Street, house, apt)",
+        "delivery_address_postomat": "Nova Poshta Postomat Number",
+        "delivery_address_ukrposhta": "Ukrposhta Index / Branch Number",
+        "payment_method": "Payment Method",
+        "card_number": "Card Number",
+        "card_expiry": "Expiry Date (MM/YY)",
+        "card_cvc": "CVC"
+      },
+      "placeholders": {
+        "courier": "e.g. Main St, 1, apt 1",
+        "branch": "e.g. 14",
+        "postomat": "e.g. 10452",
+        "ukrposhta": "e.g. 01001",
+        "card": "XXXX XXXX XXXX XXXX"
+      },
+      "delivery_methods": {
+        "nova_poshta_branch": "Nova Poshta (branch)",
+        "nova_poshta_courier": "Nova Poshta (courier)",
+        "nova_poshta_postomat": "Nova Poshta (postomat)",
+        "ukrposhta": "Ukrposhta"
+      },
+      "payment_methods": {
+        "cash_on_delivery": "Cash on delivery",
+        "card": "Card payment online"
+      },
+      "submit": "Confirm Order",
+      "processing": "Processing...",
+      "disabled": "Checkout suspended",
+      "summary": {
+        "title": "Your Order",
+        "delivery": "Delivery",
+        "delivery_tariff": "By carrier rates",
+        "total": "Total to pay"
+      },
+      "success": {
+        "title": "Order successfully placed!",
+        "message": "Thank you for your order. We will contact you shortly to confirm the details.",
+        "back_home": "Back to Home"
+      }
+    },
+    "profile": {
+      "title": "My Account",
+      "role_user": "Store Customer",
+      "role_admin": "Staff Member",
+      "details": {
+        "name": "Name",
+        "email": "Email",
+        "status": "Account Status",
+        "active": "Active",
+        "not_specified": "Not specified"
+      },
+      "actions": {
+        "logout": "Log Out"
+      },
+      "tabs": {
+        "orders": "My Orders",
+        "saved": "Saved Items",
+        "settings": "Account Settings"
+      },
+      "orders": {
+        "title": "Order History",
+        "loading": "Loading orders...",
+        "empty": "You have no orders yet.",
+        "order_number": "Order #{{id}}",
+        "total": "Total amount:",
+        "qty": "{{count}} pcs."
+      },
+      "saved": {
+        "title": "Saved Items",
+        "empty": "Your saved items list is empty."
+      },
+      "settings": {
+        "title": "Account Settings",
+        "name_label": "Name (Nickname)",
+        "email_label": "Email Address",
+        "avatar_label": "Profile Photo URL (Avatar)",
+        "avatar_hint": "Paste a link to an image.",
+        "save": "Save Changes",
+        "saving": "Saving...",
+        "success": "Profile updated successfully!",
+        "error": "Error updating profile"
+      }
+    },
+    "order_status": {
+      "new": "New",
+      "confirmed": "Confirmed",
+      "paid": "Paid",
+      "shipped": "Shipped",
+      "delivered": "Delivered",
+      "canceled": "Canceled",
+      "warranty_claim": "Warranty Claim"
+    },
+    "login": {
+      "title": "Account Login",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Login",
+      "error": "Invalid email or password"
+    },
+    "about": {
+      "hero": {
+        "subtitle": "Getting to know us",
+        "title": "More than just an {{span}}",
+        "span": "online store",
+        "description": "Gravity is an ecosystem of modern solutions for a comfortable life. We have combined innovation, quality, and the best service so that your purchases are fast, safe, and enjoyable.",
+        "btn": "Go to Catalog",
+        "tagline": "Choose the best"
+      },
+      "stats": {
+        "years": "Years on market",
+        "customers": "Happy customers",
+        "products": "Products in range",
+        "support": "Support service"
+      },
+      "values": {
+        "title": "Why choose {{span}}?",
+        "subtitle": "Our priority is the trust and comfort of every customer",
+        "quality_title": "Original Quality",
+        "quality_desc": "We cooperate only with official suppliers. All products have quality certificates and official warranty from the manufacturer.",
+        "delivery_title": "Lightning Delivery",
+        "delivery_desc": "Our own logistics system and partnership with leading services allow us to deliver your orders in the shortest possible time.",
+        "service_title": "Personal Service",
+        "service_desc": "Our consultants are always ready to help you with the choice, answer all questions, and find the perfect solution.",
+        "time_title": "Time Saving",
+        "time_desc": "User-friendly interface, fast 1-click checkout, and optimized catalog for comfortable search."
+      },
+      "mission": {
+        "badge": "Our Mission",
+        "title": "Making technologies accessible to everyone",
+        "desc1": "We believe that modern technology can change lives for the better: simplify routine, help in work, develop creativity, and connect people.",
+        "desc2": "Our goal is to erase the boundaries between innovations and their users. We don't just sell products, we create a space where choosing technology is an easy and exciting process, free of stress and doubt.",
+        "innovation": "Innovation every day"
+      }
+    },
+    "warranty_page": {
+      "hero": {
+        "title": "Official Warranty",
+        "subtitle": "We are confident in the quality of our products. Your peace of mind is our priority."
+      },
+      "conditions": {
+        "title": "Warranty Conditions",
+        "manufacturer_title": "From Manufacturer",
+        "manufacturer_desc": "All products are accompanied by an official manufacturer's warranty for a period of 12 to 36 months depending on the brand's service policy.",
+        "coupon_title": "Warranty Coupon",
+        "coupon_desc": "Confirmation of warranty obligations is the manufacturer's warranty coupon, or our store's warranty coupon."
+      },
+      "centers": {
+        "title": "Service Centers",
+        "where_title": "Where to turn in case of failure?",
+        "where_desc": "Warranty service is handled by authorized manufacturer service centers. Please note that for free repair, you must keep:",
+        "list": {
+          "package": "Full product set",
+          "coupon": "Warranty coupon",
+          "receipt": "Document confirming payment (receipt)",
+          "seals": "Integrity of factory seals on the device"
+        },
+        "footer": "*You can find the nearest service center on the official website of the manufacturer or by contacting our support service."
+      }
+    },
+    "returns_page": {
+      "hero": {
+        "title": "Product Returns",
+        "subtitle": "Something didn't fit? We guarantee easy returns within 14 days."
+      },
+      "conditions": {
+        "title": "Return Conditions (14 days)",
+        "rules_title": "Main Rules",
+        "rules_desc": "According to the Law of Ukraine \"On Protection of Consumer Rights\", you have the right to exchange or return a product within 14 days after purchase (not counting the day of purchase).",
+        "must_be_met": "To accept the product, the following conditions must be met:",
+        "list": {
+          "usage": "The product has not been used and there are no signs of operation (scratches, scuffs, software has not changed).",
+          "package": "Full configuration and integrity of the product packaging are preserved.",
+          "labels": "All tags and factory markings are preserved.",
+          "receipt": "There is a fiscal receipt or other document confirming the purchase."
+        }
+      },
+      "how_to": {
+        "title": "How to arrange a return?",
+        "step1_title": "Step 1: Application",
+        "step1_desc": "Contact our support service by phone or write an email to inform about the desire to return the product. The manager will suggest further actions.",
+        "step2_title": "Step 2: Shipping & Money",
+        "step2_desc": "Send the product by \"Nova Poshta\" to the details specified by the manager. After checking the goods by the service department, the funds will be returned to your card within 3-7 business days."
+      }
+    },
+    "delivery_page": {
+      "hero": {
+        "title": "Delivery & Payment",
+        "subtitle": "Fast, safe, and convenient. Choose the best way for you."
+      },
+      "shipping": {
+        "title": "Shipping Methods",
+        "np_branch_title": "Nova Poshta (To branch)",
+        "np_branch_desc": "Delivery to any \"Nova Poshta\" branch across Ukraine. Delivery time: 1-3 days.",
+        "np_branch_price": "From 70 UAH",
+        "np_courier_title": "Nova Poshta Courier",
+        "np_courier_desc": "Door-to-door address delivery by courier. Ideal for bulky items.",
+        "np_courier_price": "From 100 UAH",
+        "pickup_title": "Pickup from store",
+        "pickup_desc": "Pick up the product yourself from our pick-up points immediately after availability confirmation.",
+        "pickup_price": "Free"
+      },
+      "payment": {
+        "title": "Payment Methods",
+        "online_title": "Online Payment (Card)",
+        "online_desc": "Secure online payment with Visa and MasterCard directly on the website.",
+        "online_list": {
+          "pay": "Apple Pay / Google Pay",
+          "no_commission": "No commission",
+          "instant": "Instant enrollment"
+        },
+        "cod_title": "Cash on Delivery",
+        "cod_desc": "Payment in cash or by card upon receipt of the goods at the post office.",
+        "cod_list": {
+          "commission": "Post commission: 20 UAH + 2%",
+          "inspection": "Inspection before payment"
+        }
+      }
+    }
+  }
+}

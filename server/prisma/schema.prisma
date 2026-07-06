@@ -1,0 +1,272 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id               Int       @id @default(autoincrement())
+  email            String    @unique
+  password         String
+  name             String?
+  avatar           String?
+  role             Role      @default(USER)
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+  comments         Comment[]
+  receivedMessages Message[] @relation("ReceivedMessages")
+  sentMessages     Message[] @relation("SentMessages")
+  orders           Order[]
+  tasks            Task[]    @relation("AssignedTasks")
+  modifiedTasks    Task[]    @relation("TaskModifier")
+  inventoryLogs    InventoryLog[]
+}
+
+model Category {
+  id          Int        @id @default(autoincrement())
+  name        String
+  slug        String     @unique
+  icon        String?
+  parentId    Int?
+  isOversized Boolean    @default(false)
+  createdAt   DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  parent    Category?  @relation("CategoryHierarchy", fields: [parentId], references: [id])
+  children  Category[] @relation("CategoryHierarchy")
+  products  Product[]
+}
+
+model Product {
+  id          Int              @id @default(autoincrement())
+  name        String
+  slug        String           @unique
+  description String?
+  price       Decimal          @db.Decimal(10, 2)
+  attributes  Json?
+  categoryId  Int
+  isActive    Boolean          @default(true)
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+  orderItems  OrderItem[]
+  category    Category         @relation(fields: [categoryId], references: [id])
+  variants    ProductVariant[]
+  reviews     Review[]
+}
+
+model Review {
+  id        Int      @id @default(autoincrement())
+  rating    Int      @default(5)
+  comment   String?
+  userName  String   @default("Гість")
+  productId Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+}
+
+model ProductVariant {
+  id         Int         @id @default(autoincrement())
+  colorName  String
+  colorCode  String?
+  images     String[]
+  stock      Int         @default(0)
+  productId  Int
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+  orderItems      OrderItem[]
+  product         Product          @relation(fields: [productId], references: [id], onDelete: Cascade)
+  warehouseStocks WarehouseStock[]
+  inventoryLogs   InventoryLog[]
+}
+
+model Order {
+  id         Int         @id @default(autoincrement())
+  userId     Int?
+  firstName  String
+  lastName   String
+  phone      String
+  email      String
+  city       String
+  address    String
+  status     OrderStatus @default(NEW)
+  totalPrice Decimal     @db.Decimal(10, 2)
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+  user       User?       @relation(fields: [userId], references: [id])
+  items      OrderItem[]
+}
+
+model OrderItem {
+  id               Int             @id @default(autoincrement())
+  orderId          Int
+  productId        Int
+  variantId        Int?
+  quantity         Int
+  price            Decimal         @db.Decimal(10, 2)
+  serialNumber     String?
+  warrantyMonths   Int?
+  warrantyEndDate  DateTime?
+  order            Order           @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product          Product         @relation(fields: [productId], references: [id], onDelete: Cascade)
+  variant          ProductVariant? @relation(fields: [variantId], references: [id], onDelete: Cascade)
+}
+
+model Task {
+  id               Int        @id @default(autoincrement())
+  title            String
+  description      String?
+  status           TaskStatus @default(TODO)
+  order            Float      @default(0)
+  assignedToId     Int?
+  lastModifiedById Int?
+  deadline         DateTime?
+  createdAt        DateTime   @default(now())
+  updatedAt        DateTime   @updatedAt
+  comments         Comment[]
+  assignedTo       User?      @relation("AssignedTasks", fields: [assignedToId], references: [id])
+  lastModifiedBy   User?      @relation("TaskModifier", fields: [lastModifiedById], references: [id])
+}
+
+model Comment {
+  id        Int      @id @default(autoincrement())
+  text      String
+  taskId    Int
+  authorId  Int
+  createdAt DateTime @default(now())
+  author    User     @relation(fields: [authorId], references: [id])
+  task      Task     @relation(fields: [taskId], references: [id])
+}
+
+model Message {
+  id         Int      @id @default(autoincrement())
+  senderId   Int
+  receiverId Int?
+  content    String
+  read       Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  receiver   User?    @relation("ReceivedMessages", fields: [receiverId], references: [id])
+  sender     User     @relation("SentMessages", fields: [senderId], references: [id])
+}
+
+model SupportTicket {
+  id          Int              @id @default(autoincrement())
+  clientEmail String
+  clientName  String?
+  isClosed    Boolean          @default(false)
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+  messages    SupportMessage[]
+}
+
+model SupportMessage {
+  id          Int           @id @default(autoincrement())
+  ticketId    Int
+  content     String
+  isFromAdmin Boolean       @default(false)
+  adminId     Int?
+  createdAt   DateTime      @default(now())
+  ticket      SupportTicket @relation(fields: [ticketId], references: [id])
+}
+
+model Setting {
+  id        Int      @id @default(autoincrement())
+  key       String   @unique
+  value     String
+  updatedAt DateTime @updatedAt
+}
+
+model Banner {
+  id          Int      @id @default(autoincrement())
+  title       String?
+  description String?
+  imageUrl    String
+  linkUrl     String?
+  order       Int      @default(0)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+enum Role {
+  ADMIN
+  MANAGER
+  WAREHOUSE
+  CONTENT
+  USER
+}
+
+enum OrderStatus {
+  NEW
+  CONFIRMED
+  PAID
+  SHIPPED
+  DELIVERED
+  CANCELED
+  WARRANTY_CLAIM
+}
+
+enum TaskStatus {
+  TODO
+  IN_PROGRESS
+  DONE
+}
+
+model WarehouseSector {
+  id          Int              @id @default(autoincrement())
+  name        String
+  description String?
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+  shelves     WarehouseShelf[]
+}
+
+model WarehouseShelf {
+  id        Int              @id @default(autoincrement())
+  name      String
+  capacity  Int              @default(1000)
+  color     String?
+  sectorId  Int
+  createdAt DateTime         @default(now())
+  updatedAt DateTime         @updatedAt
+  sector    WarehouseSector  @relation(fields: [sectorId], references: [id], onDelete: Cascade)
+  stocks    WarehouseStock[]
+}
+
+model WarehouseStock {
+  id        Int            @id @default(autoincrement())
+  shelfId   Int
+  variantId Int
+  quantity  Int            @default(0)
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+  shelf     WarehouseShelf @relation(fields: [shelfId], references: [id], onDelete: Cascade)
+  variant   ProductVariant @relation(fields: [variantId], references: [id], onDelete: Cascade)
+
+  @@unique([shelfId, variantId])
+}
+
+model InventoryLog {
+  id        Int             @id @default(autoincrement())
+  action    InventoryAction
+  quantity  Int
+  variantId Int
+  userId    Int?
+  sectorId  Int?
+  shelfId   Int?
+  notes     String?
+  createdAt DateTime        @default(now())
+  variant   ProductVariant  @relation(fields: [variantId], references: [id], onDelete: Cascade)
+  user      User?           @relation(fields: [userId], references: [id])
+}
+
+enum InventoryAction {
+  ADD
+  REMOVE
+  SALE
+  RETURN
+  MOVE
+  MANUAL_CHANGE
+}

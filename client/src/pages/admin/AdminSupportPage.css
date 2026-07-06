@@ -1,0 +1,17 @@
+@import './AdminChatsPage.css';
+
+/* We can reuse almost all styles from AdminChatsPage by importing them.
+   Below we add any slight modifications if needed. */
+
+.support-messages-area {
+    background: #f8fafc !important;
+}
+
+/* Ensure the dark text color is applied to the guest messages correctly */
+.support-messages-area .theirs .message-content {
+    color: #1e293b;
+}
+
+.support-messages-area .mine .message-content {
+    color: #ffffff;
+}
